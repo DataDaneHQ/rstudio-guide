@@ -1,4 +1,4 @@
-![Guide_Title_Banner](00_Resources/readme_banner.png)
+![Guide_Title_Banner](00_Resources/readme_title_banner.png)
 
 # GitHub & RStudio Starter Guide
 
@@ -66,7 +66,7 @@ GitHub-RStudio-Starter-Guide/
 ├── Scripts/
 │   └── report_template.Rmd
 ├── Resources/
-│   └── readme_banner.png
+│   └── readme_title_banner.png
 └── README.md
 ```
 
