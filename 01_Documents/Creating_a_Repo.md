@@ -1,4 +1,4 @@
-![Creating_A_Repo_Banner](../Resources/creating_a_repo_banner.png)
+![Creating_A_Repo_Banner](../00_Resources/creating_a_repo_banner.png)
 
 <br>
 
@@ -30,7 +30,7 @@ Go to [github.com](https://github.com) and sign in to your account.
 
 In the top-right corner of any GitHub page, click the **+** icon, then select **New repository**.
 
-![screenshot_1](../Resources/screenshot_1.png)
+![screenshot_1](../00_Resources/screenshot_1.png)
 
 <br>
 
@@ -56,7 +56,7 @@ Write a one-sentence summary of what the repo contains. This appears on your Git
 
 Choose who can see your repository.
 
-![screenshot_2](../Resources/screenshot_2.png)
+![screenshot_2](../00_Resources/screenshot_2.png)
 
 | | Public | Private |
 |---|---|---|
@@ -72,7 +72,7 @@ Choose who can see your repository.
 
 Tick the following options before creating your repo.
 
-![screenshot_3](../Resources/screenshot_3.png)
+![screenshot_3](../00_Resources/screenshot_3.png)
 
 **Add a README file** ✅ Recommended
 - Creates a `README.md` in your repo automatically
@@ -93,7 +93,7 @@ Tick the following options before creating your repo.
 
 Click **Create repository**.
 
-![screenshot_4](../Resources/screenshot_4.png)
+![screenshot_4](../00_Resources/screenshot_4.png)
 
 Your repository is now live. The next step is linking it to an RStudio Project so you can work with it locally.
 
