@@ -14,8 +14,6 @@ This guide walks you through creating a new repository on GitHub from scratch. A
 
 You'll need a GitHub account. If you don't have one, sign up at [github.com](https://github.com).
 
----
-
 <br>
 
 ## Steps
