@@ -72,8 +72,6 @@ Choose who can see your repository.
 
 Tick the following options before creating your repo.
 
-<img src="../00_Resources/screenshot_3.png" alt="screenshot_3" width="700">
-
 **Add a README file** ✅ Recommended
 - Creates a `README.md` in your repo automatically
 - Gives you something to clone immediately — an empty repo can cause issues when linking to RStudio
@@ -87,7 +85,9 @@ Tick the following options before creating your repo.
 - Select **MIT** for most portfolio and shared documentation repos
 - See the [Licences](#licences) section below for a full comparison
 
----
+<img src="../00_Resources/screenshot_3.png" alt="screenshot_3" width="700">
+
+<br>
 
 ### 7. Create Your Repository
 
@@ -133,6 +133,8 @@ Apply your licence at repo creation by selecting it from the dropdown in Step 6.
 | **Creative Commons (CC BY 4.0)** | Use, share, adapt, including commercially | Must credit the original author | Pure documentation, guides, written content |
 | **CC BY-NC 4.0** | Use, share, adapt for non-commercial purposes only | No commercial use; must credit author | Guides you want shared but not sold |
 | **No Licence** | No permissions granted | All rights reserved by default | Private or internal repos not intended for reuse |
+
+<br>
 
 ### Which Should You Use?
 
