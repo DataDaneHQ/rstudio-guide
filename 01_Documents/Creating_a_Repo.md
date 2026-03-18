@@ -66,7 +66,7 @@ Choose who can see your repository.
 
 > **Note:** You can change visibility later under repository Settings.
 
----
+<br>
 
 ### 6. Initialise Your Repository
 
