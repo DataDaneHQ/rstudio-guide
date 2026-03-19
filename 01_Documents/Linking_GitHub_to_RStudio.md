@@ -1,4 +1,4 @@
-<img src="../Resources/linking_your_repo_banner.png" alt="Linking Your GitHub Repo to RStudio" width="100%">
+<img src="../00_Resources/linking_your_repo_banner.png" alt="Linking Your GitHub Repo to RStudio" width="100%">
 
 <br>
 
@@ -25,7 +25,7 @@ Use this workflow after creating a new repo on GitHub and you're ready to start 
 4. Click the copy icon to copy the URL — it will look like:
    `https://github.com/YOUR-USERNAME/repo-name.git`
 
-<img src="../Resources/screenshot_5.png" alt="GitHub Code button showing HTTPS URL and copy icon" width="700">
+<img src="../00_Resources/screenshot_5.png" alt="GitHub Code button showing HTTPS URL and copy icon" width="700">
 
 <br>
 
@@ -49,7 +49,7 @@ Once your project is set up, use Pull to keep your local copy in sync with GitHu
 2. Locate the **Git tab** in the top-right pane (next to Environment)
 3. Click the blue **Pull** button (down arrow icon)
 
-<img src="../Resources/Git_Pane_Image.png" alt="Git pane in RStudio showing Pull button" width="600">
+<img src="../00_Resources/screenshot_7.png" alt="Git pane in RStudio showing Pull button" width="600">
 
 ---
 <br>
@@ -75,7 +75,7 @@ Use this workflow when you want to work with a repo you don't own — forking cr
 3. Click the copy icon to copy the URL — it will look like:
    `https://github.com/YOUR-USERNAME/repo-name.git`
 
-<img src="../Resources/Fork_Repo.png" alt="Forked repository showing Code button and HTTPS URL" width="700">
+<img src="../00_Resources/Fork_Repo.png" alt="Forked repository showing Code button and HTTPS URL" width="700">
 <br>
 
 ### 3. Link to RStudio
