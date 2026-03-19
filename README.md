@@ -29,7 +29,7 @@ Built originally as internal team documentation, this guide is designed to get a
 If you're new to Git and RStudio, start here:
 
 1. [Create a GitHub repository](01_Documents/Creating_a_Repo.md)
-2. [Link it to an RStudio Project](01_Documents/Accessing_A_Repo.md)
+2. [Link it to an RStudio Project](01_Documents/Linking_GitHub_to_RStudio.md)
 3. Make your first commit, push, and pull
 
 The guide assumes basic familiarity with R and RStudio but no prior Git experience.
@@ -42,7 +42,7 @@ The guide assumes basic familiarity with R and RStudio but no prior Git experien
 
 | Issue | Guide |
 |---|---|
-| Git push errors | [01 — Git Push Troubleshooting](Documents/01-Get_Push_Troubleshooting.md) |
+| Git push errors | [01 — Git Push Troubleshooting](01_Documents/Git_Push_Troubleshooting.md) |
 | Incorrect IP address error | [02 — Incorrect IP Address](Documents/02-Incorrect_IP_Address.md) |
 | `.gitignore` tips | [03 — Gitignore Tips](Documents/03-Gitignore_Tips.md) |
 | Accessing linked documents | [04 — Accessing Documents](Documents/04-Accessing_Documents.md) |
