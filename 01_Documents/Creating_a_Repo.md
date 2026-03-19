@@ -148,4 +148,4 @@ Apply your licence at repo creation by selecting it from the dropdown in Step 6.
 
 <br>
 
-*Back to [README](../README.md)*
+➡ [Linking GitHub to RStudio](Linking_GitHub_to_RStudio.md)

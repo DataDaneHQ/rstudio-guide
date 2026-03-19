@@ -15,7 +15,7 @@ Built originally as internal team documentation, this guide is designed to get a
 | Section | Description |
 |---|---|
 | [Creating a GitHub Repository](01_Documents/Creating_a_Repo.md) | Set up and configure a new repo from scratch |
-| [Linking GitHub to RStudio](01_Documents/Accessing_A_Repo.md) | Connect a repo to an RStudio Project for version control |
+| [Linking GitHub to RStudio](01_Documents/Linking_GitHub_to_RStudio.md) | Connect a repo to an RStudio Project for version control |
 | [Markdown Quick Reference](01_Documents/Quick_Reference_Guide.md) | Essential Markdown syntax for documentation |
 | [R Markdown Template](02_Scripts/report_template.Rmd) | A ready-to-use `.Rmd` template for reports |
 | [Troubleshooting](#troubleshooting) | Common errors and how to fix them |
