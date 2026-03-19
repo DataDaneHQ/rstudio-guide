@@ -39,6 +39,7 @@ Use this workflow after creating a new repo on GitHub and you're ready to start 
 6. RStudio will download the repository and open it as a project automatically
 
 > 📸 *Screenshot here — show the Version Control → Git dialog in RStudio with the URL field.*
+
 <br>
 
 ### 3. Pull Updates
@@ -49,7 +50,7 @@ Once your project is set up, use Pull to keep your local copy in sync with GitHu
 2. Locate the **Git tab** in the top-right pane (next to Environment)
 3. Click the blue **Pull** button (down arrow icon)
 
-<img src="../00_Resources/screenshot_7.png" alt="Git pane in RStudio showing Pull button" width="600">
+<img src="../00_Resources/screenshot_7.png" alt="Git pane in RStudio showing Pull button" width="100%">
 
 ---
 <br>
