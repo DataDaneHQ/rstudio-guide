@@ -1,4 +1,4 @@
-<img src="../Resources/Git_Push_Troubleshooting_Banner.png" alt="Git Push Troubleshooting" width="100%">
+<img src="../00_Resources/git_push_troubleshooting_banner.png" alt="Git Push Troubleshooting" width="100%">
 
 <br>
 
