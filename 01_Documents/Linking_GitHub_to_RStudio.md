@@ -112,8 +112,7 @@ Click the green **Code** button on the repository page → **Download ZIP**
 |---|---|
 | Git tab not visible in RStudio | Tools → Project Options → Git/SVN → set Version Control to **Git** |
 | Authentication error when cloning | Confirm you've been added as a collaborator by the repo owner |
-| Push or pull errors | See [Git Push Troubleshooting](01-Get_Push_Troubleshooting.md) |
-| Incorrect IP address error | See [Incorrect IP Address](02-Incorrect_IP_Address.md) |
+| Push or pull errors | See [Git Push Troubleshooting](Git_Push_Troubleshooting.md) |
 
 ---
 
