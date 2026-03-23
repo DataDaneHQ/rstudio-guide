@@ -88,6 +88,7 @@ Use `#` symbols for headers. More `#` symbols = smaller header.
 *Italic text*
 ***Bold and italic***
 ~~Strikethrough~~
+<mark>Highlight</mark>
 ````
 
 **Result:**
@@ -98,6 +99,7 @@ Use `#` symbols for headers. More `#` symbols = smaller header.
 | `*Italic*` | *Italic* |
 | `***Bold and italic***` | ***Bold and italic*** |
 | `~~Strikethrough~~` | ~~Strikethrough~~ |
+| `<mark>Highlight</mark>` | <mark>Highlight</mark> |
 
 ---
 
