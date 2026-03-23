@@ -12,7 +12,7 @@ A beginner-friendly reference guide to creating and formatting Markdown (`.md`) 
 
 <table>
 <tr>
-<td width="50%">
+<td width="100%">
 
 - [Creating a Markdown File](#creating-a-markdown-file)
 - [Headers](#headers)
@@ -25,7 +25,7 @@ A beginner-friendly reference guide to creating and formatting Markdown (`.md`) 
 - [Blockquotes](#blockquotes)
 
 </td>
-<td width="50%">
+<td width="100%">
 
 - [Horizontal Rules](#horizontal-rules)
 - [Tables](#tables)
