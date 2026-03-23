@@ -1,4 +1,4 @@
-<img src="../Resources/Quick_Reference_Guide_Banner.png" alt="Markdown Quick Reference Guide" width="100%">
+<img src="../00_Resources/Quick_Reference_Guide_Banner.png" alt="Markdown Quick Reference Guide" width="100%">
 
 <br>
 
