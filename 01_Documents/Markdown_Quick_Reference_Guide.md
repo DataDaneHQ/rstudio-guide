@@ -6,9 +6,9 @@
 
 A beginner-friendly reference guide to creating and formatting Markdown (`.md`) files. Markdown is a simple way to format text using plain characters — easy to read, easy to write, and supported by GitHub, RStudio, and most modern documentation platforms.
 
----
-
 <br>
+
+### Contents
 
 <table align="center">
 <tr>
