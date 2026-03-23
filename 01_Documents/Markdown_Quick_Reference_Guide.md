@@ -1,4 +1,4 @@
-<img src="../00_Resources/Quick_Reference_Guide_Banner.png" alt="Markdown Quick Reference Guide" width="100%">
+<img src="../00_Resources/quick_reference_guide_banner.png" alt="Markdown Quick Reference Guide" width="100%">
 
 <br>
 
@@ -7,9 +7,12 @@
 A beginner-friendly reference guide to creating and formatting Markdown (`.md`) files. Markdown is a simple way to format text using plain characters — easy to read, easy to write, and supported by GitHub, RStudio, and most modern documentation platforms.
 
 ---
+
 <br>
 
-## Contents
+<table>
+<tr>
+<td width="50%">
 
 - [Creating a Markdown File](#creating-a-markdown-file)
 - [Headers](#headers)
@@ -20,6 +23,10 @@ A beginner-friendly reference guide to creating and formatting Markdown (`.md`) 
 - [Images](#images)
 - [Code](#code)
 - [Blockquotes](#blockquotes)
+
+</td>
+<td width="50%">
+
 - [Horizontal Rules](#horizontal-rules)
 - [Tables](#tables)
 - [Task Lists](#task-lists)
@@ -29,6 +36,10 @@ A beginner-friendly reference guide to creating and formatting Markdown (`.md`) 
 - [Common Mistakes](#common-mistakes)
 - [Quick Reference Table](#quick-reference-table)
 - [Useful Resources](#useful-resources)
+
+</td>
+</tr>
+</table>
 
 ---
 
