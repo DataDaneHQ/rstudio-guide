@@ -110,4 +110,4 @@ Before updating any firewall rules, confirm your current public IP address:
 
 <br>
 
-*← [Git Push Troubleshooting](01-Get_Push_Troubleshooting.md) · [README](../README.md)*
+*← [Git Push Troubleshooting](Troubleshooting_Git_Push.md) · [README](../README.md)*
