@@ -42,7 +42,7 @@ The guide assumes basic familiarity with R and RStudio but no prior Git experien
 
 | Issue | Guide |
 |---|---|
-| Git push errors | [01 — Git Push Troubleshooting](01_Documents/Git_Push_Troubleshooting.md) |
+| Git push errors | [01 — Git Push Troubleshooting](01_Documents/Troubleshooting_Git_Push.md) |
 | Incorrect IP address error | [02 — Incorrect IP Address](Documents/02-Incorrect_IP_Address.md) |
 | `.gitignore` tips | [03 — Gitignore Tips](Documents/03-Gitignore_Tips.md) |
 | Accessing linked documents | [04 — Accessing Documents](Documents/04-Accessing_Documents.md) |
