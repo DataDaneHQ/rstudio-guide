@@ -1,4 +1,4 @@
-<img src="../Resources/incorrect_ip_address_banner.png" alt="Incorrect IP Address Troubleshooting" width="100%">
+<img src="../00_Resources/incorrect_ip_address_banner.png" alt="Incorrect IP Address Troubleshooting" width="100%">
 
 <br>
 
