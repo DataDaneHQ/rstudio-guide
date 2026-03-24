@@ -42,6 +42,21 @@ Enter a short, descriptive name in the **Repository name** field.
 - Be specific — `q3-churn-analysis` is more useful than `project1`
 - Avoid version numbers in the name (e.g. `report-v2`) — that's what Git history is for
 
+**Already have a repo that needs renaming?**
+
+Rename it on GitHub first (Settings → Rename), then update your local RStudio connection via the Terminal tab:
+```bash
+git remote set-url origin https://github.com/YOUR-USERNAME/new-repo-name.git
+```
+
+Then verify it updated correctly:
+```bash
+git remote -v
+```
+
+> [!NOTE]
+> Always rename on GitHub first — if you rename the local folder first, RStudio loses the connection to the remote and you'll need to fix it manually.
+
 <br>
 
 ### 4. Add a Description *(optional but recommended)*
