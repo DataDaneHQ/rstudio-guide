@@ -78,8 +78,8 @@ folder_name/*
 
 Use `!` to un-ignore specific files inside an otherwise ignored folder:
 ```bash
-# Ignore the entire folder
-folder_name/
+# Ignore the folder contents but not the folder itself
+folder_name/*
 
 # But include these specific files
 !folder_name/file1.txt
@@ -88,7 +88,7 @@ folder_name/
 ```
 
 > [!IMPORTANT]
-> The `!` exception only works if the parent folder itself isn't ignored. If you've ignored `folder_name/`, you must use `folder_name/*` instead of `folder_name/` before adding exceptions.
+> Use `folder_name/*` rather than `folder_name/` when you need exceptions. Ignoring the folder itself with `folder_name/` blocks all exceptions — Git won't look inside an ignored folder at all.
 
 ---
 
