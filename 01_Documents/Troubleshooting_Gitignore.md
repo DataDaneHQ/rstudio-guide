@@ -23,25 +23,26 @@ The `.gitignore` file sits in the **root of your repository** — the same level
 
 ## Standard R Entries
 
-A standard R `.gitignore` automatically excludes the following:
+The following are added automatically when you select the **R** template during repo creation:
 ```bash
-# R history and session data
+.Rproj.user
 .Rhistory
-.Rapp.history
 .RData
 .Ruserdata
+```
 
-# RStudio project files
-.Rproj.user/
+### Recommended Additions
 
-# Package files
+These aren't included by default but are worth adding for most R projects:
+```bash
+# R Markdown output folders generated when knitting documents
+*_cache/
+*_files/
+
+# R package build artefacts (relevant if developing R packages)
 *.tar.gz
 *.rdb
 *.rdx
-
-# knitr and R Markdown
-/*_cache/
-//*_files/
 ```
 
 ---
