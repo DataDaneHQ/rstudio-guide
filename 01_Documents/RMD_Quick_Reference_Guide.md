@@ -384,37 +384,6 @@ create_summary_table <- function(df, header_color = "#7BA0BE") {
 create_summary_table(your_dataframe) # ✅ Replace with your dataframe name
 ````
 
-> [!TIP]
-> **`row_spec()` common options**
-> 
-> `row_spec(row, ...)` — `0` targets the header row, `1` targets the first data row, etc.
-> 
-> | Argument | Example | What it does |
-> |---|---|---|
-> | `bold` | `bold = TRUE` | Makes text bold |
-> | `italic` | `italic = TRUE` | Makes text italic |
-> | `color` | `color = "white"` | Sets text colour |
-> | `background` | `background = "#7BA0BE"` | Sets background colour |
-> | `font_size` | `font_size = 14` | Sets font size in pts |
-> | `align` | `align = "c"` | Overrides alignment for the row |
-> | `extra_css` | `extra_css = "border-top: 2px solid black;"` | Applies custom CSS |
-
-> [!TIP]
-> **`column_spec()` common options**
->
-> `column_spec(column, ...)` — column number is positional, starting at `1`.
->
-> | Argument | Example | What it does |
-> |---|---|---|
-> | `width` | `width = "150px"` | Sets fixed column width |
-> | `bold` | `bold = TRUE` | Makes all values in column bold |
-> | `italic` | `italic = TRUE` | Makes all values in column italic |
-> | `color` | `color = "grey"` | Sets text colour for the column |
-> | `background` | `background = "#f5f5f5"` | Sets background colour for the column |
-> | `border_left` | `border_left = TRUE` | Adds a left border to the column |
-> | `border_right` | `border_right = TRUE` | Adds a right border to the column |
-> | `extra_css` | `extra_css = "white-space: nowrap;"` | Applies custom CSS |
-
 **Key arguments:**
 
 | Argument | What it does |
@@ -424,6 +393,37 @@ create_summary_table(your_dataframe) # ✅ Replace with your dataframe name
 | `header_color` | Hex colour for the header row — defaults to `#7BA0BE` |
 | `full_width = TRUE` | Table stretches to full page width |
 | `striped` | Alternating row shading for readability |
+
+
+**`row_spec()` common options**
+
+`row_spec(row, ...)` — `0` targets the header row, `1` targets the first data row, etc.
+
+| Argument | Example | What it does |
+|---|---|---|
+| `bold` | `bold = TRUE` | Makes text bold |
+| `italic` | `italic = TRUE` | Makes text italic |
+| `color` | `color = "white"` | Sets text colour |
+| `background` | `background = "#7BA0BE"` | Sets background colour |
+| `font_size` | `font_size = 14` | Sets font size in pts |
+| `align` | `align = "c"` | Overrides alignment for the row |
+| `extra_css` | `extra_css = "border-top: 2px solid black;"` | Applies custom CSS |
+
+**`column_spec()` common options**
+
+`column_spec(column, ...)` — column number is positional, starting at `1`.
+
+| Argument | Example | What it does |
+|---|---|---|
+| `width` | `width = "150px"` | Sets fixed column width |
+| `bold` | `bold = TRUE` | Makes all values in column bold |
+| `italic` | `italic = TRUE` | Makes all values in column italic |
+| `color` | `color = "grey"` | Sets text colour for the column |
+| `background` | `background = "#f5f5f5"` | Sets background colour for the column |
+| `border_left` | `border_left = TRUE` | Adds a left border to the column |
+| `border_right` | `border_right = TRUE` | Adds a right border to the column |
+| `extra_css` | `extra_css = "white-space: nowrap;"` | Applies custom CSS |
+
 ---
 
 <br>
