@@ -86,8 +86,8 @@ encoding: UTF-8
 | `encoding: UTF-8` | Ensures special characters render correctly |
 
 > [!NOTE]
-> The YAML header does not include `title:` or `author:` fields — these are replaced by a custom title banner. See [Title Banner](#title-banner) below.  
-> For guidance on writing and customising your `style.css` file, see the [CSS Styling Guide](02_CSS_Styling_Guide.md).
+> - The YAML header does not include `title:` or `author:` fields — these are replaced by a custom title banner. See [Title Banner](#title-banner) below.  
+> - For guidance on writing and customising your `style.css` file, see the [CSS Styling Guide](02_CSS_Styling_Guide.md).
 
 ---
 
@@ -115,8 +115,8 @@ Instead of the standard YAML title and author fields, use a custom HTML banner t
 ````
 
 > [!TIP]
-> Update the three lines marked ✅ for each new report. Everything else can stay as is.  
-> Convert your banner image to base64 at [base64-image.de](https://www.base64-image.de) — drag and drop your image, copy the base64 string, and replace `data:image/png;base64,YOUR_BASE64_STRING_HERE` with the result. This embeds the image directly in the report so it displays correctly regardless of file paths.
+> - Update the three lines marked ✅ for each new report. Everything else can stay as is.  
+> - Convert your banner image to base64 at [base64-image.de](https://www.base64-image.de) — drag and drop your image, copy the base64 string, and replace `data:image/png;base64,YOUR_BASE64_STRING_HERE` with the result. This embeds the image directly in the report so it displays correctly regardless of file paths.
 
 ---
 
