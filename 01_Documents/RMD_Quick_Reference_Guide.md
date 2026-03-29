@@ -87,6 +87,7 @@ encoding: UTF-8
 
 > [!NOTE]
 > The YAML header does not include `title:` or `author:` fields — these are replaced by a custom title banner. See [Title Banner](#title-banner) below.
+> For guidance on writing and customising your `style.css` file, see the [CSS Styling Guide](02_CSS_Styling_Guide.md).
 
 ---
 
@@ -96,9 +97,9 @@ encoding: UTF-8
 
 Instead of the standard YAML title and author fields, use a custom HTML banner that combines a background image, main title, and subtitle. Place this directly below the YAML header.
 ````html
-<!-- Main Banner Image | Leave as is -->
+<!-- ✅ Main Banner Image | Replace 'data:image/png;base64,YOUR_BASE64_STRING_HERE' with your image path-->
 <div style="width: 100%;
-            background-image: url('../00_Resources/rmd_banner.png'); 
+            background-image: url('data:image/png;base64,YOUR_BASE64_STRING_HERE'); 
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -114,7 +115,8 @@ Instead of the standard YAML title and author fields, use a custom HTML banner t
 ````
 
 > [!TIP]
-> Update the two lines marked ✅ for each new report. Everything else can stay as is.
+> Update the three lines marked ✅ for each new report. Everything else can stay as is.
+> Convert your banner image to base64 at [base64-image.de](https://www.base64-image.de) — drag and drop your image, copy the base64 string, and replace `data:image/png;base64,YOUR_BASE64_STRING_HERE` with the result. This embeds the image directly in the report so it displays correctly regardless of file paths.
 
 ---
 
@@ -122,7 +124,7 @@ Instead of the standard YAML title and author fields, use a custom HTML banner t
 
 ## Load Libraries & Set Global Options
 
-Place this as the first code chunk in your document. It loads all required packages and sets global options that apply to every chunk in the report.
+Place this as the first code chunk in your document. Add or remove libraries based on your report's requirements — the example below reflects a typical setup for data analysis and HTML report generation. Global options apply to every chunk in the report.
 ````r
 {r setup, include=FALSE}
 # ──────────────────────────────────────────────────────────────────────────────
@@ -140,6 +142,8 @@ library(purrr)        # Functional programming tools (map, walk, etc.)
 library(plotly)       # Interactive web-based data visualisation
 library(scales)       # Format numbers, percentages, and axis labels
 library(tidyverse)    # Core packages for data manipulation and visualisation
+
+
 # ──────────────────────────────────────────────────────────────────────────────
 # 2️⃣ Global Code Chunk Options
 # ──────────────────────────────────────────────────────────────────────────────
