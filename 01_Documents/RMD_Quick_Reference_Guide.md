@@ -97,26 +97,29 @@ encoding: UTF-8
 
 Instead of the standard YAML title and author fields, use a custom HTML banner that combines a background image, main title, and subtitle. Place this directly below the YAML header.
 ````html
-<!-- ✅ Main Banner Image | Replace 'data:image/png;base64,YOUR_BASE64_STRING_HERE' with your image path-->
+<!-- ✅ Main Banner Image | Replace 'YOUR_BASE64_STRING_HERE' with your image path-->
 <div style="width: 100%;
-            background-image: url('data:image/png;base64,YOUR_BASE64_STRING_HERE'); 
+            background-image: url('YOUR_BASE64_STRING_HERE'); 
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            padding: 80px 10px;
+            padding: 75px 10px 80px 30px;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             text-align: left;">
 <!-- ✅ Change the text below to adjust the main title -->
-  <div style="font-size: 32px; font-weight: bold; margin: 0;">Enter Main Title Here</div>
+  <div style="font-size: 32px; margin: 0; letter-spacing: 2px; ">ENTER MAIN TITLE HERE</div>
 <!-- ✅ Change the text below to adjust the subtitle -->
-  <p style="margin: 0; color: white !important;">Enter Sub-title Here</p>
+  <p style="margin: 0; color: white !important;">ENTER_SUB-TITLE_HERE</p>
 </div>
 ````
 
 > [!TIP]
-> - Update the three lines marked ✅ for each new report. Everything else can stay as is.  
-> - Convert your banner image to base64 at [base64-image.de](https://www.base64-image.de) — drag and drop your image, copy the base64 string, and replace `data:image/png;base64,YOUR_BASE64_STRING_HERE` with the result. This embeds the image directly in the report so it displays correctly regardless of file paths.
+> - Follow the instructions of the three lines marked ✅ for each new report. Everything else can stay as is.  
+> - Convert your banner image to base64 at [base64-image.de](https://www.base64-image.de) — drag and drop your image, click the Code/Hide button, select Data URL, copy the base64 string, and replace `YOUR_BASE64_STRING_HERE` with the result. This embeds the image directly in the report so it displays correctly regardless of file paths.
+> - Base64 strings for large images can crash RStudio's editor. If this happens, place your banner image in the same folder as your .Rmd file and reference it by filename instead: `background-image: url('title_banner.png');`
+
+<img src="../00_Resources/base64_image_converter.png" alt="base64 converter" width="800">
 
 ---
 
