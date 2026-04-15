@@ -6,7 +6,7 @@
 
 A practical reference guide for building HTML reports in R Markdown. Covers the elements used most commonly in real analysis work — from YAML setup and data loading through to tables, BANs, and toggle buttons.
 
-For basic formatting (headers, bold, italic, lists, etc.) refer to the [Markdown Quick Reference Guide](Quick_Reference_Guide.md).
+For basic formatting (headers, bold, italic, lists, etc.) refer to the [Markdown Quick Reference Guide](Markdown_Quick_Reference_Guide.md).
 
 > [!NOTE]
 > This is a living document — new sections will be added over time as the guide expands.
