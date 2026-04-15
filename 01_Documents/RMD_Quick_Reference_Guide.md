@@ -108,7 +108,7 @@ Instead of the standard YAML title and author fields, use a custom HTML banner t
             font-family: 'Montserrat', sans-serif;
             text-align: left;">
 <!-- ✅ Change the text below to adjust the main title -->
-  <div style="font-size: 32px; margin: 0; letter-spacing: 2px; ">ENTER MAIN TITLE HERE</div>
+  <div style="font-size: 32px; margin: 0; letter-spacing: 2px; ">ENTER_MAIN_TITLE_HERE</div>
 <!-- ✅ Change the text below to adjust the subtitle -->
   <p style="margin: 0; color: white !important;">ENTER_SUB-TITLE_HERE</p>
 </div>
