@@ -2,9 +2,9 @@
 
 <br>
 
-A practical, beginner-friendly guide to version control in RStudio — covering everything from creating your first repository to writing polished R Markdown reports.
+## Overview
 
-Built originally as internal team documentation, this guide is designed to get analysts and data scientists productive with Git and GitHub as quickly as possible.
+Version control is only useful if your team actually uses it. My team was new to Git and the available documentation was too dense and slow to be useful day-to-day. This guide was built as a lean, practical quick-reference — covering everything analysts need to get productive with GitHub, RStudio, and R Markdown. From creating your first repo to writing polished reports, it focuses on the commands, workflows, and patterns used most. The result: a team that went from avoiding Git to using it confidently for collaboration, reporting, and code management.
 
 ---
 
