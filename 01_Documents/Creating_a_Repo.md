@@ -110,7 +110,7 @@ Click **Create repository**.
 
 Your repository is now live. The next step is linking it to an RStudio Project so you can work with it locally.
 
-➡ [Linking Your GitHub Repo to RStudio](Accessing_A_Repo.md)
+➡ [Linking Your GitHub Repo to RStudio](Linking_GitHub_to_RStudio.md)
 
 ---
 
