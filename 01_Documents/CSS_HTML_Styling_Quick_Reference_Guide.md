@@ -371,6 +371,9 @@ tr:nth-child(even) {
 | `nth-child(even)` | Alternating row shading for readability |
 | `tr:hover` | Subtle highlight on row hover |
 
+> [!IMPORTANT]
+> Do not include a global th rule in your style.css if you are using kableExtra — it will conflict with kableExtra's internal header styling and corrupt the table output. Header row styling is handled directly in R via row_spec(0, bold = TRUE, background = "#3ba5ae", color = "white").
+
 ---
 
 <br>
@@ -525,6 +528,8 @@ Use the `.metric-grid` wrapper to control how cards are arranged. Set `grid-temp
 
 ### Usage
 
+To render correctly in R Markdown, place ```{=html} directly above the opening <div> and three backticks directly below the closing </div>
+
 ```html
 <!-- ✅ Wrap all cards in a metric-grid div to control layout -->
 <div class="metric-grid">
@@ -667,7 +672,7 @@ Utility classes are small, single-purpose CSS classes you apply directly to any 
 
 ## Complete style.css File
 
-Copy this into a text file saved as `style.css` (including the `.css` extension and place it in the same folder as your `.Rmd` or Quarto file.
+Copy this into a text file saved as `style.css` (including the `.css` extension) and place it in the same folder as your `.Rmd` or Quarto file. Remove any sections you don't need or that conflict with your existing setup.
 
 ```css
 /* ── Google Fonts ─────────────────────────────────────────────────────────── */
@@ -814,14 +819,6 @@ table {
     margin: 20px 0;
 }
 
-th {
-    background-color: #3ba5ae;
-    color: white;
-    font-weight: 600;
-    padding: 10px 12px;
-    text-align: left;
-}
-
 td {
     padding: 8px 12px;
     border-bottom: 1px solid #e0e0e0;
@@ -954,6 +951,7 @@ hr {
 ```
 
 ---
+
 <br>
 
 *← [R Markdown Quick Reference](RMD_Quick_Reference_Guide.md) · [README](../README.md)*
