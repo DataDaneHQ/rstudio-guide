@@ -1,0 +1,281 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* ── Colour Palette ───────────────────────────────────────────────────────── */
+/*
+    #040708  — Primary text, deep backgrounds
+    #202c2d  — Dark section backgrounds
+    #3d4846  — Secondary backgrounds, borders
+    #727970  — Muted text, subtle borders
+    #3ba5ae  — Primary accent
+    #33C7BA  — Secondary accent, hover states
+*/
+
+/* ── Body & Layout ────────────────────────────────────────────────────────── */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+p {
+    margin: 0 0 12px 0;
+    color: #000000;
+}
+
+strong {
+    color: #202c2d;
+}
+
+em {
+    color: #3d4846;
+}
+
+/* ── Headings ─────────────────────────────────────────────────────────────── */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3ba5ae;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #202c2d;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3d4846;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #727970;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+/* ── Hyperlinks ───────────────────────────────────────────────────────────── */
+a {
+    color: #3ba5ae;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #33C7BA;
+    text-decoration: underline;
+}
+
+/* ── Table of Contents (R Markdown only) ─────────────────────────────────── */
+#TOC {
+    font-size: 13px;
+    color: #3d4846;
+    border-right: 2px solid #3ba5ae;
+    padding-right: 12px;
+}
+
+#TOC a {
+    color: #3d4846;
+    text-decoration: none;
+}
+
+#TOC a:hover {
+    color: #3ba5ae;
+    text-decoration: none;
+}
+
+#TOC a.active {
+    color: #3ba5ae;
+    font-weight: 600;
+}
+
+/* ── Code ─────────────────────────────────────────────────────────────────── */
+code {
+    background-color: #f4f4f4;
+    color: #202c2d;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+pre {
+    background-color: #202c2d;
+    color: #33C7BA;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid #3ba5ae;
+    font-size: 13px;
+    overflow-x: auto;
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+/* ── Tables ───────────────────────────────────────────────────────────────── */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+th {
+    background-color: #3ba5ae;
+    color: white;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #040708;
+}
+
+tr:hover {
+    background-color: #f0f8f9;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* ── Callout Boxes ────────────────────────────────────────────────────────── */
+.summary-box {
+    background-color: #e8f4f5;
+    border-left: 3px solid #3ba5ae;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.warning-box {
+    background-color: #F7CCD6;
+    border-left: 3px solid #E66684;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.info-box {
+    background-color: #d1ecf1;
+    border-left: 3px solid #0c5460;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.highlight-box {
+    background-color: #202c2d;
+    border-left: 3px solid #33C7BA;
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+/* ── Metric Cards ─────────────────────────────────────────────────────────── */
+.metric-card {
+    background-color: #ffffff;
+    border: 1px solid #3ba5ae;
+    border-top: 3px solid #3ba5ae;
+    border-radius: 6px;
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    width: 200px;
+}
+
+.metric-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #3ba5ae;
+    margin-bottom: 6px;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #727970;
+    line-height: 1.4;
+}
+
+.metric-grid {
+    display: grid;
+    gap: 16px;
+    margin: 20px 0;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 200px);
+}
+
+/* ── Toggle Buttons ───────────────────────────────────────────────────────── */
+.toggleButton {
+    background-color: #3ba5ae;
+    color: white;
+    border: 1px solid #202c2d;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.toggleButton:hover {
+    background-color: #33C7BA;
+    color: #040708;
+}
+
+/* ── Section Dividers ─────────────────────────────────────────────────────── */
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 30px 0;
+}
+
+/* ── Utility Classes ──────────────────────────────────────────────────────── */
+.centre {
+    text-align: center;
+}
+
+.text-muted {
+    color: #727970;
+    font-size: 12px;
+}
+
+.spacer {
+    margin-top: 30px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
