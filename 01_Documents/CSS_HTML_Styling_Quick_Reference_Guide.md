@@ -12,6 +12,7 @@ For guidance on linking a stylesheet to your report see the [R Markdown Quick Re
 > This guide culminates in a complete `style.css` file — see [Complete style.css File](#complete-stylecss-file). Copy it directly into your project folder and reference it in your YAML header with `css: style.css`.
 
 ---
+
 <br>
 
 ## Contents
@@ -45,6 +46,7 @@ For guidance on linking a stylesheet to your report see the [R Markdown Quick Re
 </table>
 
 ---
+
 <br>
 
 ## Compatibility Key
@@ -58,6 +60,7 @@ Each section includes a compatibility indicator showing which platform the style
 | *R Markdown* ⬜ *Quarto* ✅ | Quarto only |
 
 ---
+
 <br>
 
 ## Colour Palette
@@ -107,28 +110,60 @@ body {
 | `margin: 0 auto` | Centres the content on the page |
 
 ---
+
 <br>
 
 ## Typography
 
 *R Markdown* ✅ *Quarto* ✅
 
-General paragraph and text styling.
+Controls the appearance of general body text — paragraphs, bold, and italic elements.
+
+### Paragraphs
 
 ```css
 p {
     margin: 0 0 12px 0;
     color: #000000;
 }
+```
 
+`p` targets every paragraph of text in your report. 
+
+| Property | What it does |
+|---|---|
+| `margin: 0 0 12px 0` | Adds 12px of space below each paragraph — the four values are top, right, bottom, left. This stops paragraphs sitting directly on top of each other |
+| `color` | Sets the default paragraph text colour |
+
+---
+
+### Bold Text
+
+```css
 strong {
     color: #202c2d;
 }
+```
 
+`strong` targets anything wrapped in `**double asterisks**` in your Markdown. Setting a colour here makes bold text slightly different from regular text — in this case a dark charcoal rather than pure black, which is subtler and easier on the eye.
+
+---
+
+### Italic Text
+
+```css
 em {
     color: #3d4846;
 }
 ```
+
+`em` targets anything wrapped in `*single asterisks*` in your Markdown. Same principle as bold — a slightly lighter shade creates a gentle visual distinction without being distracting.
+
+---
+
+### Why bother with these?
+
+Without these styles your report inherits the browser's default typography — which is functional but generic. Defining `p`, `strong`, and `em` gives you consistent, intentional text styling that matches your colour palette throughout the entire report.
 
 ---
 <br>
