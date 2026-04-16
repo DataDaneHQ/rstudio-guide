@@ -1,0 +1,257 @@
+---
+output: 
+  html_document:
+    css: style.css
+    toc: true
+    toc_depth: 4
+    toc_float: true
+encoding: UTF-8
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Main Banner Image -->
+<div style="width: 100%;
+            background-image: url('title_banner.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 75px 10px 80px 30px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;">
+  <div style="font-size: 32px; margin: 0; letter-spacing: 2px;">Retail Sales Dashboard</div>
+  <p style="margin: 0; color: white !important; letter-spacing: 1px;">Fictional Data — CSS Style Test</p>
+</div>
+
+<!-- Toggle Button Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".toggleButton").forEach(function(button) {
+    let originalText = button.innerText;
+    button.addEventListener("click", function() {
+      var targetId = this.getAttribute("data-target");
+      var content = document.getElementById(targetId);
+      if (content) {
+        content.style.display = (content.style.display === "none") ? "block" : "none";
+        this.innerText = content.style.display === "none" ? originalText : "Hide " + originalText.substring(5);
+      }
+    });
+  });
+});
+</script>
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tibble)
+library(knitr)
+library(kableExtra)
+
+knitr::opts_chunk$set(
+  echo       = FALSE,
+  warning    = FALSE,
+  message    = FALSE
+)
+```
+
+```{r generate_data, include=FALSE}
+# ── Sales summary metrics ────────────────────────────────────────────────────
+total_revenue    <- 4823650
+total_orders     <- 18342
+avg_order_value  <- round(total_revenue / total_orders, 2)
+return_rate      <- 4.7
+top_region       <- "New South Wales"
+
+# ── Sales by region ──────────────────────────────────────────────────────────
+sales_by_region <- tibble(
+  Region    = c("New South Wales", "Victoria", "Queensland", 
+                "Western Australia", "South Australia"),
+  Orders    = c(5821, 4932, 3847, 2401, 1341),
+  Revenue   = c(1542300, 1298700, 987400, 634100, 361150),
+  Avg_Order = round(Revenue / Orders, 2),
+  Growth    = c("↑ 12.4%", "↑ 8.1%", "↑ 5.3%", "↓ 2.1%", "↑ 1.8%")
+)
+
+# ── Sales by category ────────────────────────────────────────────────────────
+sales_by_category <- tibble(
+  Category  = c("Electronics", "Apparel", "Home & Garden", 
+                "Sports", "Beauty"),
+  Orders    = c(4821, 5103, 3642, 2987, 1789),
+  Revenue   = c(1823400, 987600, 743200, 821300, 448150),
+  Top_Product = c("Wireless Earbuds", "Running Shoes", 
+                  "Garden Tool Set", "Yoga Mat", "Moisturiser SPF50")
+)
+
+# ── Monthly revenue ──────────────────────────────────────────────────────────
+monthly_revenue <- tibble(
+  Month   = month.abb[1:6],
+  Revenue = c(712400, 698200, 821300, 743600, 912800, 935350),
+  Orders  = c(2841, 2763, 3124, 2987, 3412, 3215)
+)
+```
+
+---
+
+## Executive Summary
+
+<div class="summary-box">
+Total revenue for the first half of FY2025 reached **$4.82M** across **18,342 orders**. New South Wales remains the top performing region, contributing 32% of total revenue. June was the strongest month on record with $935K in revenue.
+</div>
+
+---
+
+## Key Metrics
+
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-value">`r paste0("$", formatC(total_revenue, format="f", digits=0, big.mark=","))`</div>
+    <div class="metric-label">Total Revenue</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">`r formatC(total_orders, format="f", digits=0, big.mark=",")`</div>
+    <div class="metric-label">Total Orders</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">`r paste0("$", avg_order_value)`</div>
+    <div class="metric-label">Average Order Value</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value" style="color: #2ca02c;">`r paste0(return_rate, "%")`</div>
+    <div class="metric-label">Return Rate</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">`r top_region`</div>
+    <div class="metric-label">Top Performing Region</div>
+  </div>
+</div>
+
+---
+
+## Sales by Region {.tabset}
+
+### Overview
+
+```{r region_table}
+create_region_table <- function(df, header_color = "#3ba5ae") {
+  df %>%
+    kbl(
+      format    = "html",
+      align     = c("l", "c", "c", "c", "c"),
+      escape    = FALSE,
+      col.names = c("Region", "Orders", "Revenue ($)", 
+                    "Avg Order ($)", "YoY Growth"),
+      format.args = list(big.mark = ",")
+    ) %>%
+    kable_styling(
+      full_width        = TRUE,
+      bootstrap_options = c("condensed", "bordered", "hover", "striped"),
+      position          = "center",
+      font_size         = 12
+    ) %>%
+    row_spec(0, bold = TRUE, background = header_color, color = "white") %>%
+    column_spec(1, width = "200px") %>%
+    column_spec(2, width = "100px") %>%
+    column_spec(3, width = "120px") %>%
+    column_spec(4, width = "120px") %>%
+    column_spec(5, width = "100px")
+}
+
+create_region_table(sales_by_region)
+```
+
+### Insight
+
+<div class="info-box">
+Western Australia is the only region showing negative year-on-year growth at -2.1%. This may warrant further investigation into local market conditions or fulfilment issues.
+</div>
+
+<div class="warning-box">
+South Australia order volumes are low relative to population size. Consider targeted promotional activity in this region for H2 FY2025.
+</div>
+
+---
+
+## Sales by Category {.tabset}
+
+### Overview
+
+```{r category_table}
+create_category_table <- function(df, header_color = "#3ba5ae") {
+  df %>%
+    kbl(
+      format    = "html",
+      align     = c("l", "c", "c", "l"),
+      escape    = FALSE,
+      col.names = c("Category", "Orders", "Revenue ($)", "Top Product"),
+      format.args = list(big.mark = ",")
+    ) %>%
+    kable_styling(
+      full_width        = TRUE,
+      bootstrap_options = c("condensed", "bordered", "hover", "striped"),
+      position          = "center",
+      font_size         = 12
+    ) %>%
+    row_spec(0, bold = TRUE, background = header_color, color = "white") %>%
+    column_spec(1, width = "150px") %>%
+    column_spec(2, width = "100px") %>%
+    column_spec(3, width = "120px") %>%
+    column_spec(4, width = "200px")
+}
+
+create_category_table(sales_by_category)
+```
+
+### Detail
+
+<div style="display: flex; justify-content: center; margin-bottom: 1em;">
+  <button class="toggleButton" data-target="category_detail">
+    Show Category Notes
+  </button>
+</div>
+
+<div id="category_detail" class="codeContent" style="display:none;">
+
+<div class="highlight-box">
+**Electronics** is the highest revenue category at $1.82M despite ranking second in order volume — driven by high average order values. Wireless Earbuds remain the top selling product for the third consecutive quarter.
+</div>
+
+<div class="info-box">
+**Apparel** leads in order volume at 5,103 orders. Running Shoes account for 34% of category revenue.
+</div>
+
+</div>
+
+---
+
+## Monthly Revenue
+
+```{r monthly_table}
+monthly_revenue %>%
+  kbl(
+    format    = "html",
+    align     = c("l", "c", "c"),
+    escape    = FALSE,
+    col.names = c("Month", "Revenue ($)", "Orders"),
+    format.args = list(big.mark = ",")
+  ) %>%
+  kable_styling(
+    full_width        = TRUE,
+    bootstrap_options = c("condensed", "bordered", "hover", "striped"),
+    position          = "center",
+    font_size         = 12
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#3ba5ae", color = "white") %>%
+  row_spec(6, bold = TRUE, background = "#e8f4f5")
+```
+
+<p class="text-muted">Source: Fictional retail dataset — for style testing purposes only.</p>
+
+---
+
+## Notes
+
+<div class="spacer"></div>
+
+<div class="summary-box">
+This report is a style test for the CSS HTML Styling Quick Reference Guide. All data is fictional and generated purely to demonstrate CSS elements in a realistic reporting context.
+</div>

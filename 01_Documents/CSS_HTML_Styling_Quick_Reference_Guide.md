@@ -667,7 +667,7 @@ Utility classes are small, single-purpose CSS classes you apply directly to any 
 
 ## Complete style.css File
 
-Copy this into a file named `style.css` and place it in the same folder as your `.Rmd` or Quarto file.
+Copy this into a text file saved as `style.css` (including the `.css` extension and place it in the same folder as your `.Rmd` or Quarto file.
 
 ```css
 /* ── Google Fonts ─────────────────────────────────────────────────────────── */
