@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<!-- Toggle Button Styling | Adjust colours as needed -->
+<!-- Toggle Button Styling (can place this section in your style.css file instead | Adjust colours as needed -->
 <style>
   .toggleButton {
     background-color: #a4bdcf;   /* Button colour */
