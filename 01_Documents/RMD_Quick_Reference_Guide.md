@@ -34,6 +34,7 @@ For basic formatting (headers, bold, italic, lists, etc.) refer to the [Markdown
 - [Tabsets](#tabsets)
 - [Toggle Buttons](#toggle-buttons)
 - [BAN Tables](#ban-tables)
+- [Browsable Tables](#browsable-tables)
 - [Summary Tables](#summary-tables)
 
 </td>
