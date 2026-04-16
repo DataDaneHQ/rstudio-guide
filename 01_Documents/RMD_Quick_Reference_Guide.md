@@ -350,6 +350,165 @@ cat('</div>')
 
 <br>
 
+## Browsable Tables
+
+A reusable function for creating interactive, scrollable, and exportable tables using the `DT` package. Includes a full screen toggle button and an Excel download option — ideal for large datasets where users need to search, filter, and explore the data directly within the report.
+
+**Key features**:
+
+- Scrollable with configurable height  
+- Full screen mode for easier data exploration  
+- Excel export button  
+- Search with highlight  
+- Configurable page length  
+
+### Step 1 — Define the Function
+
+```r
+{r dt_function, include=FALSE}
+make_dt <- function(
+    data,
+    container_id   = "dt-container",
+    button_id      = "fs-button",
+    filename       = "export",
+    scroll_y       = "400px",
+    page_length    = 20,
+    fs_scroll_y    = "1000px",
+    fs_max_height  = "800px"
+) {
+  tags$div(
+    style = "position: relative;",
+    tags$button(
+      "Full Screen",
+      id    = button_id,
+      style = "
+        position: absolute;
+        top: 1px;
+        left: 150px;
+        z-index: 1000;
+        padding: 4px 8px;
+        font-size: 12px;
+        cursor: pointer;
+      "
+    ),
+    tags$div(
+      id    = container_id,
+      style = "
+        position: relative;
+        border: 1px solid #ddd;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+      ",
+      datatable(
+        data,
+        extensions = "Buttons",
+        options    = list(
+          dom      = "Bfrtip",
+          buttons  = list(
+            list(
+              extend   = "excel",
+              text     = "Download XLSX",
+              filename = filename
+            )
+          ),
+          scrollY         = scroll_y,
+          scrollX         = TRUE,
+          paging          = TRUE,
+          pageLength      = page_length,
+          searchHighlight = TRUE
+        ),
+        rownames = FALSE,
+        class    = "stripe hover",
+        escape   = FALSE,
+        callback = JS(sprintf("
+          var container = document.getElementById('%s');
+          function adjustScrollBody(isFullscreen) {
+            var scrollBody = container.querySelector('.dataTables_scrollBody');
+            if (!scrollBody) return;
+            if (isFullscreen) {
+              scrollBody.style.height    = '%s';
+              scrollBody.style.maxHeight = '%s';
+            } else {
+              scrollBody.style.height    = '%s';
+              scrollBody.style.maxHeight = '%s';
+            }
+          }
+          document.getElementById('%s').onclick = function() {
+            if (container.requestFullscreen) {
+              container.requestFullscreen();
+            } else if (container.webkitRequestFullscreen) {
+              container.webkitRequestFullscreen();
+            } else if (container.mozRequestFullScreen) {
+              container.mozRequestFullScreen();
+            } else if (container.msRequestFullscreen) {
+              container.msRequestFullscreen();
+            }
+          };
+          document.addEventListener('fullscreenchange', function() {
+            adjustScrollBody(document.fullscreenElement === container);
+          });
+          document.addEventListener('webkitfullscreenchange', function() {
+            adjustScrollBody(document.webkitFullscreenElement === container);
+          });
+          document.addEventListener('mozfullscreenchange', function() {
+            adjustScrollBody(document.mozFullScreenElement === container);
+          });
+          document.addEventListener('MSFullscreenChange', function() {
+            adjustScrollBody(document.msFullscreenElement === container);
+          });
+          adjustScrollBody(false);
+        ",
+        container_id, fs_scroll_y, fs_max_height,
+        scroll_y, scroll_y,
+        button_id
+        ))
+      )
+    )
+  ) %>% browsable()
+}
+```
+
+### Step 2 — Render the Table
+
+**Single table:**
+
+```r
+{r browsable_table}
+make_dt(your_dataframe, filename = "your_export_name")
+```
+
+**Multiple tables in the same report** — each table needs a unique container_id and button_id:
+
+```r
+{r browsable_tables}
+make_dt(your_first_dataframe,  container_id = "dt-container1", button_id = "fs-button1", filename = "first_export")
+make_dt(your_second_dataframe, container_id = "dt-container2", button_id = "fs-button2", filename = "second_export")
+```
+
+**Key arguments:**
+
+| Argument | Default | What it does |
+|---|---|---|
+| `data` | Required | The dataframe to display |
+| `container_id` | `"dt-container"` | Unique ID for the table container — must be different for each table |
+| `button_id` | `"fs-button"` | Unique ID for the full screen button — must be different for each table |
+| `filename` | `"export"` | Name of the downloaded Excel file |
+| `scroll_y` | `"400px"` | Table height in normal view |
+| `page_length` | `20` | Number of rows shown per page |
+| `fs_scroll_y` | `"1000px"` | Table height in full screen mode |
+| `fs_max_height` | `"800px"` | Maximum height in full screen mode |
+
+> [!IMPORTANT]
+> When using multiple browsable tables in the same report, every table must have a unique `container_id` and `button_id`. Duplicate IDs will cause the full screen button to malfunction.
+
+> [!TIP]
+> Add `DT` to your library chunk — `library(DT)` — and ensure `htmltools` is loaded for `tags$div` and `browsable()` to work.
+
+---
+
+<br>
+
 ## Summary Tables
 
 A reusable function for styled, consistently formatted summary tables using `kableExtra`. Adjust column names, widths, and alignment to suit your data.
