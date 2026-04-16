@@ -92,7 +92,7 @@ monthly_revenue <- tibble(
 
 ---
 
-## Executive Summary
+# Executive Summary
 
 <div class="summary-box">
 Total revenue for the first half of FY2025 reached **$4.82M** across **18,342 orders**. New South Wales remains the top performing region, contributing 32% of total revenue. June was the strongest month on record with $935K in revenue.
@@ -100,32 +100,38 @@ Total revenue for the first half of FY2025 reached **$4.82M** across **18,342 or
 
 ---
 
+<br>
+
 ## Key Metrics
 
+```{=html}
 <div class="metric-grid">
   <div class="metric-card">
-    <div class="metric-value">`r paste0("$", formatC(total_revenue, format="f", digits=0, big.mark=","))`</div>
+    <div class="metric-value">$4,823,650</div>
     <div class="metric-label">Total Revenue</div>
   </div>
   <div class="metric-card">
-    <div class="metric-value">`r formatC(total_orders, format="f", digits=0, big.mark=",")`</div>
+    <div class="metric-value">18,342</div>
     <div class="metric-label">Total Orders</div>
   </div>
   <div class="metric-card">
-    <div class="metric-value">`r paste0("$", avg_order_value)`</div>
+    <div class="metric-value">$262.98</div>
     <div class="metric-label">Average Order Value</div>
   </div>
   <div class="metric-card">
-    <div class="metric-value" style="color: #2ca02c;">`r paste0(return_rate, "%")`</div>
+    <div class="metric-value" style="color: #2ca02c;">4.7%</div>
     <div class="metric-label">Return Rate</div>
   </div>
   <div class="metric-card">
-    <div class="metric-value">`r top_region`</div>
+    <div class="metric-value">NSW</div>
     <div class="metric-label">Top Performing Region</div>
   </div>
 </div>
+```
 
 ---
+
+<br>
 
 ## Sales by Region {.tabset}
 
@@ -138,9 +144,7 @@ create_region_table <- function(df, header_color = "#3ba5ae") {
       format    = "html",
       align     = c("l", "c", "c", "c", "c"),
       escape    = FALSE,
-      col.names = c("Region", "Orders", "Revenue ($)", 
-                    "Avg Order ($)", "YoY Growth"),
-      format.args = list(big.mark = ",")
+      col.names = c("Region", "Orders", "Revenue", "Avg Order", "YoY Growth")
     ) %>%
     kable_styling(
       full_width        = TRUE,
@@ -159,6 +163,10 @@ create_region_table <- function(df, header_color = "#3ba5ae") {
 create_region_table(sales_by_region)
 ```
 
+---
+
+<br>
+
 ### Insight
 
 <div class="info-box">
@@ -171,35 +179,40 @@ South Australia order volumes are low relative to population size. Consider targ
 
 ---
 
+<br>
+
 ## Sales by Category {.tabset}
 
 ### Overview
 
 ```{r category_table}
-create_category_table <- function(df, header_color = "#3ba5ae") {
-  df %>%
-    kbl(
-      format    = "html",
-      align     = c("l", "c", "c", "l"),
-      escape    = FALSE,
-      col.names = c("Category", "Orders", "Revenue ($)", "Top Product"),
-      format.args = list(big.mark = ",")
-    ) %>%
-    kable_styling(
-      full_width        = TRUE,
-      bootstrap_options = c("condensed", "bordered", "hover", "striped"),
-      position          = "center",
-      font_size         = 12
-    ) %>%
-    row_spec(0, bold = TRUE, background = header_color, color = "white") %>%
-    column_spec(1, width = "150px") %>%
-    column_spec(2, width = "100px") %>%
-    column_spec(3, width = "120px") %>%
-    column_spec(4, width = "200px")
-}
-
-create_category_table(sales_by_category)
+sales_by_category %>%
+  mutate(
+    Revenue = formatC(Revenue, format = "f", digits = 0, big.mark = ","),
+    Orders  = formatC(Orders,  format = "f", digits = 0, big.mark = ",")
+  ) %>%
+  kbl(
+    format    = "html",
+    align     = c("l", "c", "c", "l"),
+    escape    = FALSE,
+    col.names = c("Category", "Orders", "Revenue ($)", "Top Product")
+  ) %>%
+  kable_styling(
+    full_width        = TRUE,
+    bootstrap_options = c("condensed", "bordered", "hover", "striped"),
+    position          = "center",
+    font_size         = 12
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#3ba5ae", color = "white") %>%
+  column_spec(1, width = "150px") %>%
+  column_spec(2, width = "100px") %>%
+  column_spec(3, width = "120px") %>%
+  column_spec(4, width = "200px")
 ```
+
+---
+
+<br>
 
 ### Detail
 
@@ -223,16 +236,21 @@ create_category_table(sales_by_category)
 
 ---
 
+<br>
+
 ## Monthly Revenue
 
 ```{r monthly_table}
 monthly_revenue %>%
+  mutate(
+    Revenue = formatC(Revenue, format = "f", digits = 0, big.mark = ","),
+    Orders  = formatC(Orders,  format = "f", digits = 0, big.mark = ",")
+  ) %>%
   kbl(
     format    = "html",
     align     = c("l", "c", "c"),
     escape    = FALSE,
-    col.names = c("Month", "Revenue ($)", "Orders"),
-    format.args = list(big.mark = ",")
+    col.names = c("Month", "Revenue ($)", "Orders")
   ) %>%
   kable_styling(
     full_width        = TRUE,
@@ -248,6 +266,8 @@ monthly_revenue %>%
 
 ---
 
+<br>
+
 ## Notes
 
 <div class="spacer"></div>
@@ -255,3 +275,7 @@ monthly_revenue %>%
 <div class="summary-box">
 This report is a style test for the CSS HTML Styling Quick Reference Guide. All data is fictional and generated purely to demonstrate CSS elements in a realistic reporting context.
 </div>
+
+---
+
+<br>

@@ -230,7 +230,7 @@ Toggle buttons show and hide content on click — useful for keeping reports cle
 
 Place this once in your document, directly below the title banner. It can be removed entirely if toggle buttons aren't needed.
 ````html
-<!-- Toggle Button Script | Leave as is or remove if buttons not required -->
+<!-- Toggle Button Script | Leave as is or remove if buttons not required. Styling is controlled in style.css -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".toggleButton").forEach(function(button) {
@@ -247,7 +247,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<!-- Toggle Button Styling (can place this section in your style.css file instead | Adjust colours as needed -->
+<!-- Toggle Button Styling | Adjust colours as needed -->
+<!-- ✅ If you are using a style.css file, move the contents below into it and delete this entire <style> block -->
 <style>
   .toggleButton {
     background-color: #a4bdcf;   /* Button colour */
