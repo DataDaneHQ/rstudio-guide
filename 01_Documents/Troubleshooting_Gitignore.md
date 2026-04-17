@@ -9,6 +9,17 @@ A `.gitignore` file tells Git which files and folders to leave untracked — mea
 > [!NOTE]
 > When you initialise a new repo on GitHub with the **R** template selected, a standard `.gitignore` is created automatically. You can then customise it for your project.
 
+### Contents
+
+- [Where Does .gitignore Live?](#where-does-gitignore-live)
+- [Standard R Entries](#standard-r-entries)
+- [Ignoring Specific Files and Folders](#ignoring-specific-files-and-folders)
+- [Including Files from an Ignored Folder](#including-files-from-an-ignored-folder)
+- [Already Tracking a File by Mistake?](#already-tracking-a-file-by-mistake)
+- [Keeping Empty Folders in Your Repo](#keeping-empty-folders-in-your-repo)
+- [Quick Reference](#quick-reference)
+- [Further Reading](#further-reading)
+
 ---
 
 <br>
