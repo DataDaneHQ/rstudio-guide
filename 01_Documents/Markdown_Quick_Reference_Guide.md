@@ -23,6 +23,7 @@ A beginner-friendly reference guide to creating and formatting Markdown (`.md`) 
 - [Images](#images)
 - [Code](#code)
 - [Blockquotes](#blockquotes)
+- [Details Toggle](#details-toggle)
 
 </td>
 <td width="460">
@@ -252,6 +253,49 @@ Use `>` for blockquotes:
 > It can span multiple lines.
 >
 > It can also have multiple paragraphs.
+
+---
+
+<br>
+
+## Details Toggle
+
+A native HTML element that creates a collapsible section with a clickable label. No JavaScript required — works in GitHub, R Markdown, and Quarto.
+
+```html
+<details>
+<summary>Click to expand</summary>
+<br>
+Your content here — text, images, code, or anything else.
+</details>
+```
+
+**Result:**
+
+<details>
+<summary>Click to expand</summary>
+<br>
+Your content here — text, images, code, or anything else.
+</details>
+
+**With an image:**
+
+```html
+<details>
+<summary>Image — Click to expand</summary>
+<br>
+<img src="path/to/image.png" alt="Description" width="700">
+</details>
+```
+
+| Part | What it does |
+|---|---|
+| `<details>` | The collapsible container |
+| `<summary>` | The visible clickable label |
+| `<br>` | Adds a small gap between the label and content when expanded |
+
+> [!TIP]
+> By default the section is collapsed. Add the `open` attribute to have it expanded on load: `<details open>`
 
 ---
 
