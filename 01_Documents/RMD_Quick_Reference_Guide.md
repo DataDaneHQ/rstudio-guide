@@ -11,11 +11,9 @@ For basic formatting (headers, bold, italic, lists, etc.) refer to the [Markdown
 > [!NOTE]
 > This is a living document — new sections will be added over time as the guide expands.
 
----
-
 <br>
 
-## Contents
+### Contents
 
 <table align="center">
 <tr>

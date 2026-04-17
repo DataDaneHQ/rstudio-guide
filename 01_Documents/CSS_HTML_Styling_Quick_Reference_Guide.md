@@ -11,11 +11,9 @@ For guidance on linking a stylesheet to your report see the [R Markdown Quick Re
 > [!NOTE]
 > This guide culminates in a complete `style.css` file — see [Complete style.css File](#complete-stylecss-file). Copy it directly into your project folder and reference it in your YAML header with `css: style.css`.
 
----
-
 <br>
 
-## Contents
+### Contents
 
 <table align="center">
 <tr>
