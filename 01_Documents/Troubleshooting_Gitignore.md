@@ -114,6 +114,39 @@ git commit -m "Remove tracked files now covered by gitignore"
 
 <br>
 
+## Keeping Empty Folders in Your Repo
+
+Git does not track empty folders — if a folder contains no files, it will be ignored when you commit and won't exist when someone clones your repo. The `.gitkeep` convention solves this by placing an empty placeholder file inside the folder, giving Git something to track.
+
+### Create a .gitkeep File
+
+**Windows (Command Prompt):**
+
+```bash
+type nul > folder_name/.gitkeep
+```
+
+**Mac/Linux (Terminal):**
+
+```bash
+touch folder_name/.gitkeep
+```
+
+**Use case:** Setting up a project template where the folder structure should be committed but the folders themselves are empty — for example `Data/`, `Outputs/`, or `Reports/` folders that will be populated later.
+
+> [!NOTE]
+> `.gitkeep` is a convention, not a Git feature. The file can be named anything — `.gitkeep` is just widely understood shorthand for "this file exists only to preserve the folder."
+
+> [!TIP]
+> Add `.gitkeep` to your `.gitignore` if you don't want these placeholder files showing up in your repo file listings:
+> ```bash
+> .gitkeep
+> ```
+
+---
+
+<br>
+
 ## Quick Reference
 
 | Pattern | What it does |
