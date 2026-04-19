@@ -18,6 +18,7 @@ Version control is only useful if your team actually uses it. My team was new to
 | [Linking GitHub to RStudio](01_Documents/Linking_GitHub_to_RStudio.md) | Connect a repo to an RStudio Project for version control |
 | [Markdown Quick Reference](01_Documents/Markdown_Quick_Reference_Guide.md) | Essential Markdown syntax for documentation |
 | [R Markdown Quick Reference](01_Documents/RMD_Quick_Reference_Guide.md) | A practical reference guide for building HTML reports in R Markdown |
+| [Quarto Quick Reference](01_Documents/Quarto_Quick_Reference_Guide.md) | A practical reference guide for building reports in Quarto |
 | [CSS Styling Quick Reference](01_Documents/CSS_HTML_Styling_Quick_Reference_Guide.md) | Custom CSS styles and a complete `style.css` file for HTML reports |
 | [Troubleshooting](#troubleshooting) | Common errors and how to fix them |
 

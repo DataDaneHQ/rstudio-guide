@@ -6,7 +6,7 @@
 
 A practical reference guide for styling HTML reports in R Markdown and Quarto. Each section includes the CSS, usage syntax, and compatibility indicators so you know exactly what works where.
 
-For guidance on linking a stylesheet to your report see the [R Markdown Quick Reference Guide](RMD_Quick_Reference_Guide.md#yaml-header).
+For guidance on linking a stylesheet to your report see the [R Markdown Quick Reference Guide - YAML Header](RMD_Quick_Reference_Guide.md#yaml-header), .
 
 > [!NOTE]
 > This guide culminates in a complete `style.css` file — see [Complete style.css File](#complete-stylecss-file). Copy it directly into your project folder and reference it in your YAML header with `css: style.css`.

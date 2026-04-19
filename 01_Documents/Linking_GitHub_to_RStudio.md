@@ -146,4 +146,4 @@ Click the green **Code** button on the repository page → **Download ZIP**
 
 <br>
 
-*← [Creating a GitHub Repository](Creating_A_Repo.md) · [README](../README.md)*
+*← [Creating a GitHub Repository](Creating_a_Repo.md) · [README](../README.md)*
