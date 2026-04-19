@@ -84,7 +84,7 @@ encoding: UTF-8
 
 > [!NOTE]
 > - The YAML header does not include `title:` or `author:` fields — these are replaced by a custom title banner. See [Title Banner](#title-banner) below.  
-> - For guidance on writing and customising your `style.css` file, see the [CSS Styling Guide](02_CSS_Styling_Guide.md).
+> - For guidance on writing and customising your `style.css` file, see the [CSS Styling Guide](CSS_HTML_Styling_Quick_Reference_Guide.md).
 
 ---
 
