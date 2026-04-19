@@ -104,17 +104,17 @@ From time to time scripts and documentation may be updated. To ensure you're alw
 
 1. Open your forked repository on GitHub and click **Sync fork** to retrieve the latest updates from the original repository.
 
-   <img src="00_Resources/sync_fork_image.png" alt="Syncing your fork" width="800">
+   <img src="../00_Resources/sync_fork_image.png" alt="Syncing your fork" width="800">
 
 2. Open your forked repository project in RStudio.
 
 3. Close all currently open scripts and documents.
 
-   <img src="00_Resources/close_scripts_image.png" alt="Close open scripts">
+   <img src="../00_Resources/close_scripts_image.png" alt="Close open scripts">
 
 4. Open the **Git** tab in the top right pane and click **Pull** — or the down arrow if the pane is too narrow to display the full label.
 
-   <img src="00_Resources/pull_image.png" alt="Git Pull" width="500">
+   <img src="../00_Resources/pull_image.png" alt="Git Pull" width="500">
 
 5. Reopen your scripts/documents — your repository and project files are now up to date.
 
