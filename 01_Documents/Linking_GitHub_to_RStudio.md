@@ -4,7 +4,11 @@
 
 ## Overview
 
-This guide walks you through linking a GitHub repository to RStudio so you can work with it locally using version control. It covers three scenarios — [cloning](#cloning-your-own-repository) your own repo, [forking](#forking-someone-elses-repository) someone else's, and [downloading files](#just-want-to-view-the-files) without version control.
+This guide walks you through linking a GitHub repository to RStudio so you can work with it locally using version control. It covers four scenarios:  
+- [cloning](#cloning-your-own-repository) your own repo  
+- [forking](#forking-someone-elses-repository) someone else's  
+- [syncing your fork]()  
+- [downloading files](#just-want-to-view-the-files) without version control.
 
 > [!IMPORTANT]
 > If the repository is private, you must be added as a collaborator before you can clone it. If you receive an authentication error, contact the repository owner to request access.
@@ -89,6 +93,32 @@ Follow the same steps as cloning your own repo:
 3. Paste your fork's URL into the **Repository URL** field
 4. Choose where to save the project on your computer
 5. Click **Create Project**
+
+---
+
+<br>
+
+## Syncing Your Fork
+
+From time to time scripts and documentation may be updated. To ensure you're always working with the latest versions, sync your forked repository then pull the changes into your local project folder.
+
+1. Open your forked repository on GitHub and click **Sync fork** to retrieve the latest updates from the original repository.
+
+   <img src="05_Resources/sync_fork_image.png" alt="Syncing your fork" width="800">
+   
+   > **Note:** The repository name shown in this screenshot is an example — yours will display as `esc-whisperx`.
+
+2. Open your forked `esc-whisperx` project in RStudio.
+
+3. Close all currently open scripts and documents.
+
+   <img src="05_Resources/close_scripts_image.png" alt="Close open scripts">
+
+4. Open the **Git** tab in the top right pane and click **Pull** — or the down arrow if the pane is too narrow to display the full label.
+
+   <img src="05_Resources/pull_image.png" alt="Git Pull" width="500">
+
+5. Reopen your scripts/documents — your repository and project files are now up to date.
 
 ---
 
